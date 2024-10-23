@@ -15,7 +15,16 @@ public class Program
 
         // Add services to the container.
         builder.Services.AddAuthorization();
-        builder.Services.AddAuthentication().AddCookie(IdentityConstants.ApplicationScheme);
+        builder.Services.AddAuthentication()
+            .AddCookie(IdentityConstants.ApplicationScheme, options =>
+            {
+                // Return to 401 when not authenticated
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    context.Response.StatusCode = 401;
+                    return Task.CompletedTask;
+                };
+            });
 
         builder.Services.AddIdentityCore<User>()
             .AddEntityFrameworkStores<ProductsDbContext>()

@@ -20,11 +20,11 @@ I have used ASP.NET Core Identity for authentication.
 
 Once the db migration is run, you can register a user by navigating to the `/register` endpoint.
 
-![img.png](Screenshots/img.png)
+![img.png](Screenshots/img.png)AddCookie
 
-After registering, you can log in by navigating to the `/login` endpoint.
+After registering, you can log in by navigating to the `/login` endpoint. Make sure to set `useCookies = true` and `useSessionCookies = true`.
 
-![img_1.png](Screenshots/img_1.png)
+![img4.png](Screenshots/img4.png)
 
 The authentication is done using a cookie which should be valid for 30 minutes.
 
