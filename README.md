@@ -18,11 +18,11 @@ The ef core update command should create user related tables and a Product table
 
 I have used ASP.NET Core Identity for authentication.
 
-Once the db migration is run, you can register a user by navigating to the `/register` route. After registering, you can login by navigating to the `/register` route to register a user.
+Once the db migration is run, you can register a user by navigating to the `/register` endpoint.
 
 ![img.png](Screenshots/img.png)
 
-Then to the `/login` route to login.
+After registering, you can log in by navigating to the `/login` endpoint.
 
 ![img_1.png](Screenshots/img_1.png)
 
