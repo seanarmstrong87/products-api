@@ -20,11 +20,11 @@ I have used ASP.NET Core Identity for authentication.
 
 Once the db migration is run, you can register a user by navigating to the `/register` endpoint.
 
-![img.png](Screenshots/img.png)AddCookie
+![img.png](Images/img.png)AddCookie
 
 After registering, you can log in by navigating to the `/login` endpoint. Make sure to set `useCookies = true` and `useSessionCookies = true`.
 
-![img4.png](Screenshots/img4.png)
+![img4.png](Images/img4.png)
 
 The authentication is done using a cookie which should be valid for 30 minutes.
 
@@ -50,10 +50,16 @@ Given more time I would add integration tests which would test the endpoints usi
 I have included some example screenshots of the application running from swagger.
 
 - Get all products
-![img_2.png](Screenshots/img_2.png)
+![img_2.png](Images/img_2.png)
 
 - Post a product
-![img_3.png](Screenshots/img_3.png)
+![img_3.png](Images/img_3.png)
 
 - Update a product
-![img_5.png](Screenshots/img_5.png)
+![img_5.png](Images/img_5.png)
+
+## In the context of a larger system
+Here is a simplified architecture diagram of how this API could fit into a larger microservices system. Each domain having it's
+own API and database. The API Gateway would be responsible for routing requests to the correct API and the message broker service
+is responsible for sending messages between the services and ensuring eventual consistency.
+![Excalidraw_Export_ProductsAPI.png](Images/Excalidraw_Export_ProductsAPI.png)
