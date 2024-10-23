@@ -36,6 +36,7 @@ There is one controller in the project, the `ProductController`. The controller 
 e.g. `api/Product?Colour=Yellow&Price.From=10&Price.To=20`
 2. `POST /api/product` - This endpoint creates a new product in the database.
 3. `PUT /api/product/{id}` - This endpoint updates an existing product in the database.
+4. `GET api/health` - This endpoint returns a 200 status code if the application is running.
 
 ## Testing
 
