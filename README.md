@@ -43,7 +43,8 @@ e.g. `api/Product?Colour=Yellow&Price.From=10&Price.To=20`
 There is a Tests project with some example tests for the ProductRepository and ProductsQueryBuilder. 
 The repository tests use an in-memory database to test the repository methods.
 
-Given more time I would add integration tests which would test the endpoints using a test server or spin up a database with some seeded data in a docker container to test against.
+Given more time I would add more tests for the input dto validation and integration and load tests which would 
+test the endpoints using a test server or spin up a database with some seeded data in a docker container to test against.
 
 ## Example screenshots
 

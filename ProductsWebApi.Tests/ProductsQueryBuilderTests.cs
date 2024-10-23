@@ -21,7 +21,9 @@ namespace ProductsWebApi.Tests
             var products = new List<Product>
             {
                 new() { Id = 1, Name = "Product1", Colour = ColourChoice.Red },
-                new() { Id = 2, Name = "Product2", Colour = ColourChoice.Blue }
+                new() { Id = 2, Name = "Product2", Colour = ColourChoice.Blue },
+                new() { Id = 3, Name = "Product3", Colour = ColourChoice.Green },
+                new() { Id = 4, Name = "Product4", Colour = ColourChoice.Black },
             }.AsQueryable();
 
             var request = new ProductsRequest { Colour = ColourChoice.Red };
