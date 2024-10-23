@@ -2,7 +2,7 @@
 
 ## Database
 
-There is a DB migration `20241023185654_InitialCreate.cs` that creates the initial schema for the database. The migration is located in the `Migrations` folder. To run the migration, execute the following command in the root of the project:
+There is a DB migration `20241023185654_InitialCreate.cs` that creates the initial schema for the database. The migration is located in the `Migrations` folder. To run the migration, execute the following command in the ProductsWebApi folder next to the csproj file:
 
 ```bash
 dotnet ef database update 
@@ -20,11 +20,11 @@ I have used ASP.NET Core Identity for authentication.
 
 Once the db migration is run, you can register a user by navigating to the `/Identity/Account/Register` route. After registering, you can login by navigating to the `/register` route to register a user.
 
-![img.png](img.png)
+![img.png](Screenshots/img.png)
 
 Then to the `/login` route to login.
 
-![img_1.png](img_1.png)
+![img_1.png](Screenshots/img_1.png)
 
 The authentication is done using a cookie which should be valid for 30 minutes.
 
@@ -44,3 +44,15 @@ The repository tests use an in-memory database to test the repository methods.
 
 Given more time I would add integration tests which would test the endpoints using a test server or spin up a database with some seeded data in a docker container to test against.
 
+## Example screenshots
+
+I have included some example screenshots of the application running from swagger.
+
+- Get all products
+![img_2.png](Screenshots/img_2.png)
+
+- Post a product
+![img_3.png](Screenshots/img_3.png)
+
+- Update a product
+![img_5.png](Screenshots/img_5.png)
