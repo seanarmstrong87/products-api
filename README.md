@@ -54,7 +54,7 @@ I have included some example screenshots of the application running from swagger
 ![img_2.png](Images/img_2.png)
 
 - Post a product
-![img_3.png](Images/img_3.png)
+![img_4.png](Images/img_4.png)
 
 - Update a product
 ![img_5.png](Images/img_5.png)
@@ -64,3 +64,17 @@ Here is a simplified architecture diagram of how this API could fit into a large
 own API and database. The API Gateway would be responsible for routing requests to the correct API and the message broker service
 is responsible for sending messages between the services and ensuring eventual consistency.
 ![Excalidraw_Export_ProductsAPI.png](Images/Excalidraw_Export_ProductsAPI.png)
+
+## Improvements
+
+- Flesh out the product model with more properties.
+- Populate swagger dropdowns with enum strings.
+- Improve error handling, e.g. wrong authentication details.
+- Setup other methods of authentication.
+- Extra ID column (GUID) to track entities across services.
+- DB indexes on any columns that are queried on frequently.
+- Paging for the get products endpoint.
+- Migrations and DB code into separate project
+- Proper specification pattern for DB queries
+- More xml comments for the API and generate docs from the comments.
+- Separate the identity DB from the application DB for use across services
